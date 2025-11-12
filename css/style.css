@@ -1,0 +1,254 @@
+/* =========================================================
+   🎨 Allgemeine Grundeinstellungen (global)
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   🧭 Header / Navigation
+   ========================================================= */
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0066cc;
+}
+
+nav a {
+  color: #0066cc;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   🏠 Startseite (index.php)
+   ========================================================= */
+.titel {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: linear-gradient(to bottom right, #0066cc, #004b99);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.titel h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.titel p {
+  font-size: 20px;
+  margin-bottom: 25px;
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0066cc;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #004b99;
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   🔍 Suchfeld (auf Startseite)
+   ========================================================= */
+.search-bar {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.search-bar input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #004b99;
+}
+
+/* =========================================================
+   💼 Jobangebote / Karten
+   ========================================================= */
+main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #004b99;
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.job-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.job-card:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.job-card h3 {
+  color: #0066cc;
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   ➕ Button: Neuen Job hinzufügen
+   ========================================================= */
+.add-job-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.add-job-btn a {
+  background-color: #0055cc;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.add-job-btn a:hover {
+  background-color: #003b99;
+  transform: scale(1.15);
+}
+
+/* =========================================================
+   🧍 Login / Register
+   ========================================================= */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #0066cc, #004b99);
+}
+
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.auth-box h1 {
+  color: #004b99;
+  margin-bottom: 20px;
+}
+
+.auth-box input[type="email"],
+.auth-box input[type="password"],
+.auth-box input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-box button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background-color: #004b99;
+}
+
+/* =========================================================
+   📄 Footer
+   ========================================================= */
+footer {
+  background-color: #004b99;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
