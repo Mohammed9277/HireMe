@@ -32,6 +32,8 @@
         <button type="submit">Suchen</button>
     </div>
 
+
+
     <!-- Job Listings -->
     <main>
         <h2>Aktuelle Jobangebote</h2>
